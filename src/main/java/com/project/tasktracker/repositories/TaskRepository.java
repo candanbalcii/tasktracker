@@ -1,6 +1,5 @@
 package com.project.tasktracker.repositories;
 
-
 import com.project.tasktracker.domain.entities.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
