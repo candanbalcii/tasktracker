@@ -7,6 +7,7 @@ import com.project.tasktracker.domain.entities.TaskStatus;
 import com.project.tasktracker.repositories.TaskListRepository;
 import com.project.tasktracker.repositories.TaskRepository;
 import com.project.tasktracker.services.TaskService;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -97,5 +98,11 @@ public class TaskServiceImpl implements TaskService {
 
 
     }
+    @Transactional
+    @Override
+    public void deleteTask(UUID taskListId, UUID taskId) {
+        taskRepository.deleteByTaskListIdAndId(taskListId, taskId);
+    }
+
 
 }
