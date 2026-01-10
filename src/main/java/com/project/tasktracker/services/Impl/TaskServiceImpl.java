@@ -46,7 +46,8 @@ public class TaskServiceImpl implements TaskService {
         TaskPriority taskPriority = Optional.ofNullable(task.getPriority())
                 .orElse(TaskPriority.MEDIUM);
 
-        TaskStatus taskStatus =  TaskStatus.OPEN;
+        TaskStatus taskStatus = Optional.ofNullable(task.getStatus())
+                .orElse(TaskStatus.OPEN);
 
         TaskList taskList = taskListRepository.findById(taskListId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid Task List ID provided!"));
