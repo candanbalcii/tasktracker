@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "f49c8d1c-9666-4ffc-be87-9de8548267d4",
+		"name": "Task Tracker API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48034052",
+		"_collection_link": "https://candancemrebalci-4167798.postman.co/workspace/Candan-Balc%C4%B1's-Workspace~16f1b92d-d875-498e-8d3e-d51eca9294f8/collection/48034052-f49c8d1c-9666-4ffc-be87-9de8548267d4?action=share&source=collection_link&creator=48034052"
+	},
+	"item": [
+		{
+			"name": "Task Lists",
+			"item": [
+				{
+					"name": "Get All Task Lists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task-lists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Task Lists",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Morning Routine\",\r\n    \"description\": \"collection of small habits to start the day with energy\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/task-lists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Task List by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task-lists/2579af56-3cb1-450a-8077-2bd6217b362f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task-lists",
+								"2579af56-3cb1-450a-8077-2bd6217b362f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task List",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Updated Weekend Chores\",\r\n    \"description\": \"Clean the house, do the laundry\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/task-lists/2579af56-3cb1-450a-8077-2bd6217b362f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task-lists",
+								"2579af56-3cb1-450a-8077-2bd6217b362f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task List",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Get Tasks for a Task List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task-lists/2579af56-3cb1-450a-8077-2bd6217b362f/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task-lists",
+								"2579af56-3cb1-450a-8077-2bd6217b362f",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"title\": \"Wake up early\",\r\n    \"description\": \"Get out of bed before 7 AM\",\r\n    \"priority\": \"LOW\",\r\n    \"status\": \"CLOSED\"\r\n    }\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/task-lists/5bf66a7b-5a1a-4f3c-ac5c-d9b4be125d41/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task-lists",
+								"5bf66a7b-5a1a-4f3c-ac5c-d9b4be125d41",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Task for a Task List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/task-lists/2579af56-3cb1-450a-8077-2bd6217b362f/tasks/ad2e9716-4249-4c20-a469-cd3c9716dcbc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task-lists",
+								"2579af56-3cb1-450a-8077-2bd6217b362f",
+								"tasks",
+								"ad2e9716-4249-4c20-a469-cd3c9716dcbc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"id\": \"203043bf-c1a4-489b-ad84-de7cad51923c\",\r\n                \"title\": \"Skin care routine\",\r\n                \"description\": \"Wash your face with niacinamide\",\r\n                \"dueDate\": null,\r\n                \"priority\": \"HIGH\",\r\n                \"status\": \"OPEN\"\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/task-lists/5bf66a7b-5a1a-4f3c-ac5c-d9b4be125d41/tasks/203043bf-c1a4-489b-ad84-de7cad51923c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task-lists",
+								"5bf66a7b-5a1a-4f3c-ac5c-d9b4be125d41",
+								"tasks",
+								"203043bf-c1a4-489b-ad84-de7cad51923c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Updated clean kitchen\",\r\n  \"description\": \"Wipe surfaces and mop floor\",\r\n  \"priority\": \"HIGH\",\r\n  \"status\": \"CLOSED\",\r\n  \"dueDate\": \"2026-01-15T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/task-lists/5bf66a7b-5a1a-4f3c-ac5c-d9b4be125d41/tasks/4cfc60eb-beec-4a8c-bbaf-9383801882e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"task-lists",
+								"5bf66a7b-5a1a-4f3c-ac5c-d9b4be125d41",
+								"tasks",
+								"4cfc60eb-beec-4a8c-bbaf-9383801882e1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
